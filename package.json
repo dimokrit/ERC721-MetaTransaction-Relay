@@ -2,7 +2,8 @@
   "name": "hardhat-project",
   "allowImportingTsExtensions": true,
   "devDependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0"
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.16"
   },
   "dependencies": {
     "@metamask/eth-sig-util": "^8.0.0",

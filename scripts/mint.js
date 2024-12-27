@@ -16,6 +16,7 @@ async function mint() {
     const network = (await providerDefender.getNetwork()).name
     console.warn(`Current network is ${network}`)
     const signer = await client.relaySigner.getSigner(providerDefender, { speed: 'fast' })
+    console.log(`BALANCE ${await providerDefender.getBalance(await signer.getAddress())}`)
     console.log(`Minting ${amount} NFT to ${to}. Please wait . . .`)
     const externalErc721Address = process.env.ERC721
     const erc721 = new ethers.Contract(externalErc721Address ? externalErc721Address : erc721RelayableDeployed[network].address, erc721RelayableArtifacts.abi, signer)
